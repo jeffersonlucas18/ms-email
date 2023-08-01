@@ -22,6 +22,9 @@ public class Email {
     @Column(name = "de")
     private String emailTo;
 
+    @Column(name = "status_id")
+    private Long statusId;
+
     @Column(name = "assunto")
     private String subject;
 
