@@ -19,8 +19,8 @@ public class EmailDto {
     private String emailTo;
     @NotBlank
     private String subject;
-    @NotBlank
-    private LocalDateTime sendDateEmail;
+//    @NotBlank
+//    private LocalDateTime sendDateEmail;
     @NotBlank
     private String text;
 }

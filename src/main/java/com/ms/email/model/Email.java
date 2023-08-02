@@ -3,6 +3,7 @@ package com.ms.email.model;
 import jakarta.persistence.*;
 import lombok.Data;
 
+import java.time.LocalDateTime;
 import java.util.Date;
 
 @Data
@@ -17,7 +18,7 @@ public class Email {
     private String ownerRef;
 
     @Column(name = "para")
-    private String emailForm;
+    private String emailFrom;
 
     @Column(name = "de")
     private String emailTo;

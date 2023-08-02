@@ -2,9 +2,9 @@ package com.ms.email.rest;
 
 import com.ms.email.model.Email;
 import com.ms.email.model.dto.EmailDto;
-import com.ms.email.repository.EmailRepository;
 import com.ms.email.service.EmailService;
 import jakarta.validation.Valid;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -16,11 +16,8 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("email")
 public class EmailRestController {
 
-    private final EmailService emailService;
-
-    public EmailRestController(EmailService emailService){
-        this.emailService = emailService;
-    }
+    @Autowired
+    private  EmailService emailService;
 
     @PostMapping("/sending-email.json")
     public ResponseEntity<Email> sendingEmail(@RequestBody @Valid EmailDto emailDto) {
